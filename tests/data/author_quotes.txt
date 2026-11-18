@@ -1,0 +1,5 @@
+The only way to do great work is to love what you do. - Steve Jobs
+Simplicity is the soul of efficiency. - Austin Freeman
+Programs must be written for people to read, and only incidentally for machines to execute. - Harold Abelson
+First, solve the problem. Then, write the code. - John Johnson
+Premature optimization is the root of all evil. - Donald Knuth

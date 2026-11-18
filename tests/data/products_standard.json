@@ -1,0 +1,37 @@
+[
+  {
+    "productId": "PROD-001",
+    "name": "Wireless Bluetooth Headphones",
+    "price": 79.99,
+    "currency": "USD",
+    "inStock": true
+  },
+  {
+    "productId": "PROD-002",
+    "name": "Mechanical Gaming Keyboard",
+    "price": 129.5,
+    "currency": "USD",
+    "inStock": true
+  },
+  {
+    "productId": "PROD-003",
+    "name": "USB-C Fast Charging Cable",
+    "price": 14.99,
+    "currency": "USD",
+    "inStock": true
+  },
+  {
+    "productId": "PROD-004",
+    "name": "27-Inch 4K IPS Monitor",
+    "price": 349.0,
+    "currency": "USD",
+    "inStock": false
+  },
+  {
+    "productId": "PROD-005",
+    "name": "Ergonomic Wireless Mouse",
+    "price": 45.25,
+    "currency": "USD",
+    "inStock": true
+  }
+]

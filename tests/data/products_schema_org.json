@@ -1,0 +1,50 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Wireless Bluetooth Headphones",
+    "sku": "WBH-001",
+    "offers": {
+      "@type": "Offer",
+      "price": "79.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Studio Condenser Microphone",
+    "sku": "SCM-002",
+    "offers": {
+      "@type": "Offer",
+      "price": "149.00",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Portable SSD 1TB",
+    "sku": "SSD-003",
+    "offers": {
+      "@type": "Offer",
+      "price": "89.50",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Webcam 1080p HD",
+    "sku": "CAM-004",
+    "offers": {
+      "@type": "Offer",
+      "price": "39.95",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+]

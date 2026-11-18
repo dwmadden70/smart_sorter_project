@@ -1,0 +1,14 @@
+# Teacher-only grading guide
+lessons/ANSWER_KEY.md
+
+# Auto-generated test & inspection reports (optional: ignore if students run locally)
+# tests/results/*.md
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/

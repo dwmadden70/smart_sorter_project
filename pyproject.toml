@@ -1,0 +1,9 @@
+[project]
+name = "smart-sorter-project"
+version = "0.3.0"
+description = "Universal adaptive Big O sorting helper for 10th-grade CS instruction."
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
