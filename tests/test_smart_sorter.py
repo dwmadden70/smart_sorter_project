@@ -346,7 +346,7 @@ class TestSmartSorterClassroom(unittest.TestCase):
             self.assertIn("[Report Saved]", proc_auto.stdout)
             self.assertTrue(report_a.is_file())
             md_text_a = report_a.read_text(encoding="utf-8")
-            self.assertIn("# Smart Sorter Inspection Report: weather_telemetry.csv", md_text_a)
+            self.assertIn("# Test for Smart Sorter Inspection Report: weather_telemetry.csv", md_text_a)
             self.assertIn("#### Classroom Diagnostic Report", md_text_a)
             self.assertIn("- **type:** JSON / dictionary records", md_text_a)
             self.assertIn("#### Preview: First 2 of", md_text_a)
@@ -390,14 +390,14 @@ class TestSmartSorterClassroom(unittest.TestCase):
                     "--runalltests",
                     "--report-out",
                     tmpdir,
-                    "TestSmartSorterClassroom.test_author_quotes_strings",
-                    "TestSmartSorterClassroom.test_student_scores_counting_sort",
+                    "tests.test_smart_sorter.TestSmartSorterClassroom.test_author_quotes_strings",
+                    "tests.test_smart_sorter.TestSmartSorterClassroom.test_student_scores_counting_sort",
                 ],
                 capture_output=True,
                 text=True,
                 check=False,
             )
-            self.assertEqual(proc.returncode, 0, msg=proc.stderr)
+            self.assertEqual(proc.returncode, 0, msg=proc.stderr or proc.stdout)
             self.assertIn("[PASS   ] test_author_quotes_strings", proc.stdout)
             self.assertIn("[PASS   ] test_student_scores_counting_sort", proc.stdout)
             self.assertNotIn("AuthorQuotes.md", proc.stdout)
@@ -405,7 +405,7 @@ class TestSmartSorterClassroom(unittest.TestCase):
             builtin_file = Path(tmpdir) / "AuthorQuotes.md"
             self.assertTrue(builtin_file.is_file())
             builtin_content = builtin_file.read_text(encoding="utf-8")
-            self.assertIn("# Test for author_quotes.txt", builtin_content)
+            self.assertIn("# Tests for author_quotes.txt", builtin_content)
             self.assertIn("- **Best Sort Chosen:** Timsort / Powersort (Python Built-in)", builtin_content)
             self.assertIn("- **Why:**", builtin_content)
             self.assertNotIn("Source URL", builtin_content)
@@ -413,7 +413,7 @@ class TestSmartSorterClassroom(unittest.TestCase):
             non_builtin_file = Path(tmpdir) / "StudentScores.md"
             self.assertTrue(non_builtin_file.is_file())
             non_builtin_content = non_builtin_file.read_text(encoding="utf-8")
-            self.assertIn("# Test for student_scores.json", non_builtin_content)
+            self.assertIn("# Tests for student_scores.json", non_builtin_content)
             self.assertIn("- **Best Sort Chosen:** Counting Sort", non_builtin_content)
             self.assertIn("- **Source URL:** https://pypi.org/project/sortcraft/", non_builtin_content)
             self.assertIn("- **Install:** `pip install sortcraft`", non_builtin_content)
