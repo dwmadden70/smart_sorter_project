@@ -340,7 +340,7 @@ def _type_safe_sort_key(pair):
     """
     Provides deterministic, crash-free ordering across heterogeneous data types
     while preserving true numeric ordering for ints and floats.
-    Rank order: None (0) < bool (1) < finite numbers (2) < NaN/Inf (3) < str (4) < other (5).
+    Rank order: None (0) < bool (1) < finite numbers (2) < -Inf (3, 0) < +Inf (3, 1) < NaN (3, 2) < str (4) < other (5).
     """
     val = pair[0]
     if val is None:
@@ -349,9 +349,9 @@ def _type_safe_sort_key(pair):
         return (1, int(val), "")
     if isinstance(val, (int, float)):
         if math.isnan(val):
-            return (3, 1, "")
+            return (3, 2, "")
         if math.isinf(val):
-            return (3, 0 if val < 0 else 2, "")
+            return (3, 0 if val < 0 else 1, "")
         return (2, float(val), "")
     if isinstance(val, str):
         return (4, 0, val)
