@@ -346,7 +346,7 @@ class TestSmartSorterClassroom(unittest.TestCase):
             self.assertIn("[Report Saved]", proc_auto.stdout)
             self.assertTrue(report_a.is_file())
             md_text_a = report_a.read_text(encoding="utf-8")
-            self.assertIn("# Test for Smart Sorter Inspection Report: weather_telemetry.csv", md_text_a)
+            self.assertIn("# Tests for Smart Sorter Inspection Report: weather_telemetry.csv", md_text_a)
             self.assertIn("#### Classroom Diagnostic Report", md_text_a)
             self.assertIn("- **type:** JSON / dictionary records", md_text_a)
             self.assertIn("#### Preview: First 2 of", md_text_a)
