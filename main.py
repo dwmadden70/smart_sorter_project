@@ -57,7 +57,7 @@ def _format_markdown_report(raw_console_output, dataset_file, command_used):
     lines = raw_console_output.splitlines()
 
     md_lines = [
-        f"# Test for {dataset_file}",
+        f"# Tests for {dataset_file}",
         "",
         f"- **Generated:** {timestamp}",
         f"- **Command:** `{command_used}`",
