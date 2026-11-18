@@ -12,3 +12,7 @@ __pycache__/
 venv/
 env/
 .pytest_cache/
+
+# Auto-generated test & inspection Markdown reports
+tests/results/*.md
+
