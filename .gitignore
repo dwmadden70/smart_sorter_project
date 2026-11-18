@@ -16,3 +16,4 @@ env/
 # Auto-generated test & inspection Markdown reports
 tests/results/*.md
 
+tests/results/*.md
